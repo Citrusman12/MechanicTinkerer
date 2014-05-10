@@ -1,8 +1,10 @@
 package com.imposterinc.mechanictinkerer;
 
 import com.imposterinc.mechanictinkerer.gui.GuiHandler;
+import com.imposterinc.mechanictinkerer.tileentity.TileEntityVehicleAssemblerBench;
 
 import cpw.mods.fml.common.network.NetworkRegistry;
+import cpw.mods.fml.common.registry.GameRegistry;
 
 public class CommonProxy 
 {
@@ -16,5 +18,6 @@ public class CommonProxy
 	}
 
 	public void registerTileEntities(){
+		GameRegistry.registerTileEntity(TileEntityVehicleAssemblerBench.class, "tileEntityVehicleAssemblerBench");
 	}
 }

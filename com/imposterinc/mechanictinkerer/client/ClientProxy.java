@@ -1,7 +1,11 @@
 package com.imposterinc.mechanictinkerer.client;
 
 import com.imposterinc.mechanictinkerer.CommonProxy;
-import net.minecraftforge.client.MinecraftForgeClient;
+import com.imposterinc.mechanictinkerer.entity.EntityCar;
+import com.imposterinc.mechanictinkerer.model.ModelCar;
+import com.imposterinc.mechanictinkerer.render.RenderCar;
+
+import cpw.mods.fml.client.registry.RenderingRegistry;
 
 public class ClientProxy extends CommonProxy 
 {
@@ -9,8 +13,7 @@ public class ClientProxy extends CommonProxy
         @Override
         public void registerRenderers() 
         {
-        // This is for rendering entities and so forth later on
-        
+    		RenderingRegistry.registerEntityRenderingHandler(EntityCar.class, new RenderCar(new ModelCar(), 0));
         }
         
 }
